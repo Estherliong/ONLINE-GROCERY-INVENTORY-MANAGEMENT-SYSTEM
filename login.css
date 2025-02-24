@@ -1,0 +1,161 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+
+body{
+    background-image: url("image/background.jpg");
+    
+    background-size: cover;
+    overflow: hidden;
+}
+
+main
+{
+    display: flex;
+    /* height: 100vh; */
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Set position to enable centering */
+    transform: translateY(+70%);
+    
+}
+
+.container
+{
+    width: 80%;
+    max-width: 450px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    margin: 0 25px;
+    border-radius: 10px;
+    box-shadow: inset -2px 2px 2px white;
+    position: relative; 
+    transform: translateY(-50%);
+}
+
+.form-title
+{
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 6px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    border-bottom: solid 1px white;
+}
+
+.main-user-info
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.user-input-box:nth-child(1n)
+{
+    justify-content: end;
+}
+
+.user-input-box
+{
+    display: flex;
+    flex-flow: column nowrap;    
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.user-input-box label
+{
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 5px 0;
+}
+
+.user-input-box input
+{
+    height: 40px;
+    width: 100%;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid grey;
+    padding: 0 10px;
+}
+
+.form-submit-btn
+{
+    margin-top: 20px;
+}
+
+.form-submit-btn input
+{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    color: rgb(209, 209, 209);
+    background: rgba(63, 114, blue76, 0.7);
+}
+
+.form-submit-btn input:hover
+{
+    background: rgba(56, 204, 93, 0.7);
+    color: rgb(255, 255, 255);
+}
+
+p a
+{
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-size: 15px;
+    text-align: center;
+    justify-content: center;
+    color: rgb(22, 22, 223);
+}
+
+p a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+p
+{
+    font-family: sans-serif;
+    color: azure;
+}
+
+@media(max-width:600px)
+{
+    .container
+    {
+        margin-bottom: 12px;
+        width: 80%;
+    }
+
+    .user-input-box:nth-child(1n)
+    {
+        justify-content: space-between;
+    }
+
+    .main-user-info
+    {
+        max-height: 380px;
+        overflow: auto;
+    }
+
+    .main-user-info::-webkit-scrollbar
+    {
+        width: 0;
+    }
+}
